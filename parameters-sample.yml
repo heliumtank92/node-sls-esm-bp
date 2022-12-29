@@ -1,0 +1,25 @@
+region: ''
+service: ''
+stage: ''
+managedPolicies: ''
+
+customDomain:
+  domainName: ''
+  basePath: ''
+  certificateName: ''
+  createRoute53Record: true
+  createRoute53IPv6Record: true
+  autoDomain: true
+  endpointType: regional
+  apiType: http
+
+deploymentBucket:
+  name: ''
+  versioning: false
+
+tags:
+  Product: ''
+  BillingCode: ''
+  Creator: ''
+  Environment: ''
+  Name: ''

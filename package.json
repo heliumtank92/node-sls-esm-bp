@@ -1,0 +1,50 @@
+{
+  "name": "node-sls-rsrc-esm-bp",
+  "version": "0.0.1",
+  "description": "Node Boilerplate using Express JS. This Boilerplate supports Jose Crypto, Logging Solution & HttpClient by default.",
+  "type": "module",
+  "main": "app.mjs",
+  "scripts": {
+    "start": "node app.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git@github.com:heliumtank92/node-sls-esm-bp.git",
+  "homepage": "https://github.com/heliumtank92/node-sls-esm-bp#readme",
+  "contributors": [
+    {
+      "name": "Ankit Gandhi",
+      "email": "ankitgandhi452@gmail.com",
+      "url": "https://github.com/ankitgandhi452"
+    },
+    {
+      "name": "Mehul Agarwal",
+      "email": "agarwalmehul92@gmail.com",
+      "url": "https://github.com/agarwalmehul"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@am92/api-crypto": "^1.0.1",
+    "@am92/express-utils": "^1.0.1",
+    "@vendia/serverless-express": "^4.10.1",
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "helmet": "^6.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "serverless": "3.26.0",
+    "serverless-deployment-bucket": "^1.6.0",
+    "serverless-domain-manager": "^6.2.1",
+    "serverless-dotenv-plugin": "^4.0.2"
+  },
+  "keywords": [
+    "node",
+    "boilerplate",
+    "crypto",
+    "nodeHttp",
+    "express"
+  ]
+}

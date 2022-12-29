@@ -1,0 +1,39 @@
+custom: ${file(./parameters.yml)}
+
+useDotenv: true
+
+service: ${self:custom.service}
+
+plugins:
+  - serverless-dotenv-plugin
+  - serverless-domain-manager
+  - serverless-deployment-bucket
+
+package:
+  exclude:
+    - src/**
+
+frameworkVersion: "3.17.0"
+
+provider:
+  name: aws
+  region: ${self:custom.region}
+  stage: ${self:custom.stage}
+  stackName: ${self:service}-${self:provider.stage}
+  apiName: ${self:service}-${self:provider.stage}
+  runtime: nodejs14.x
+  memorySize: 3000
+  
+  iam:
+    role:
+      managedPolicies:
+        - ${self:custom.managedPolicies}
+
+  tags: ${self:custom.tags}
+
+functions:
+  index:
+    handler: lambda.handler
+    name: ${self:service}-${self:provider.stage}
+    events:
+      - httpApi: '*'
