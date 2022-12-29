@@ -1,4 +1,5 @@
 import 'dotenv/config'
+import logger from './api/helpers/logger.mjs'
 import Express from 'express'
 import cors from 'cors'
 import bodyParser from 'body-parser'

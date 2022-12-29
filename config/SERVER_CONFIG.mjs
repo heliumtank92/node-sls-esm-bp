@@ -1,3 +1,12 @@
+import packageJson from '../package.json' assert { type: 'json' }
+
+// Set Package Name and Version in case these are filtered out for any reason
+if (!process.env.npm_package_name) {
+  const { name, version } = packageJson
+  process.env.npm_package_name = name
+  process.env.npm_package_version = version
+}
+
 const {
   PORT = 8080,
   BODY_LIMIT = '5mb',
@@ -34,7 +43,7 @@ const SERVER_CONFIG = {
 
 export default SERVER_CONFIG
 
-function _sanitizeRegExpStr (string) {
+function _sanitizeRegExpStr(string) {
   const escapedString = string.trim().replace(/[./]/g, '\\$&')
   const whildcardReplaced = escapedString.replace(/\*/g, '[0-9a-zA-Z.\\-_:]*')
   return `^${whildcardReplaced}$`.trim()
