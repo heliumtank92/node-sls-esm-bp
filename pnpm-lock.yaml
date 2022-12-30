@@ -2,8 +2,9 @@ lockfileVersion: 5.4
 
 specifiers:
   '@am92/api-crypto': ^1.0.2
-  '@am92/api-logger': ^1.0.0
-  '@am92/express-utils': ^1.0.2
+  '@am92/api-logger': ^1.0.3
+  '@am92/express-utils': ^1.0.5
+  '@am92/node-http': ^1.0.3
   '@vendia/serverless-express': ^4.10.1
   body-parser: ^1.20.1
   cors: ^2.8.5
@@ -18,8 +19,9 @@ specifiers:
 
 dependencies:
   '@am92/api-crypto': 1.0.2
-  '@am92/api-logger': 1.0.0
-  '@am92/express-utils': 1.0.2
+  '@am92/api-logger': 1.0.3
+  '@am92/express-utils': 1.0.5
+  '@am92/node-http': 1.0.3
   '@vendia/serverless-express': 4.10.1
   body-parser: 1.20.1
   cors: 2.8.5
@@ -55,20 +57,20 @@ packages:
       - aws-crt
     dev: false
 
-  /@am92/api-logger/1.0.0:
-    resolution: {integrity: sha512-0EfKJwzYeCXRCQ7yD45sceYXP3maH9yl5tkoAciHDoc9dDowYfppNzZg9IPqbaHgu9tmv0n8hMaVIkROyyfsJA==}
+  /@am92/api-logger/1.0.3:
+    resolution: {integrity: sha512-QpOe6LCrpgsgAsJXkRvwzY/qwe4KJ6kqHc/eDaeCAnM7fWf+qoa6jGBUBvEIv51w2ac+mgaPVW9gTIgewVRSPw==}
     requiresBuild: true
     dependencies:
       chalk: 5.2.0
       winston: 3.8.2
     dev: false
 
-  /@am92/express-utils/1.0.2:
-    resolution: {integrity: sha512-Mu81CczlSV2LudMBc4wzk2Q28cw5IoVjq2i8qP6fa3oEjbWWvQTndGu84NFQFfhIgEAtz5VLU9Az8qtFblc7zQ==}
+  /@am92/express-utils/1.0.5:
+    resolution: {integrity: sha512-LeU84AMcdwCxI6W0O86t/exVjbi+eeTYUnJtqaZhPeGJmCZy+N7pp5DNgMKIJrE2gd42yV+U4F9uKnD2cVM7QA==}
     requiresBuild: true
     dependencies:
       '@am92/api-crypto': 1.0.2
-      '@am92/api-logger': 1.0.0
+      '@am92/api-logger': 1.0.3
       express-http-context: 1.2.4
       lodash: 4.17.21
       nanoid: 4.0.0
@@ -88,6 +90,17 @@ packages:
       '@aws-sdk/client-kms': 3.241.0
     transitivePeerDependencies:
       - aws-crt
+    dev: false
+
+  /@am92/node-http/1.0.3:
+    resolution: {integrity: sha512-l8s6xcI1Qcn5SGQDBqbhuXLKjMOgb3P9/gGGeWBtSQmOQpi5uiJJdRES5DonoYIs+8lbNfF0OPeHWpLCnUNdFg==}
+    requiresBuild: true
+    dependencies:
+      '@am92/api-logger': 1.0.3
+      axios: 1.2.2
+      axios-retry: 3.3.1
+    transitivePeerDependencies:
+      - debug
     dev: false
 
   /@am92/redis/1.0.1:
@@ -813,6 +826,13 @@ packages:
       tslib: 2.4.1
     dev: false
 
+  /@babel/runtime/7.20.7:
+    resolution: {integrity: sha512-UF0tvkUtxwAgZ5W/KrkHf0Rn0fdnLDU9ScxBrEVNUprE/MzirjK4MJUX1/BVDv00Sv8cljtukVK1aky++X1SjQ==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      regenerator-runtime: 0.13.11
+    dev: false
+
   /@colors/colors/1.5.0:
     resolution: {integrity: sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==}
     engines: {node: '>=0.1.90'}
@@ -1270,7 +1290,6 @@ packages:
 
   /asynckit/0.4.0:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
-    dev: true
 
   /at-least-node/1.0.0:
     resolution: {integrity: sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==}
@@ -1298,6 +1317,13 @@ packages:
       xml2js: 0.4.19
     dev: true
 
+  /axios-retry/3.3.1:
+    resolution: {integrity: sha512-RohAUQTDxBSWLFEnoIG/6bvmy8l3TfpkclgStjl5MDCMBDgapAWCmr1r/9harQfWC8bzLC8job6UcL1A1Yc+/Q==}
+    dependencies:
+      '@babel/runtime': 7.20.7
+      is-retry-allowed: 2.2.0
+    dev: false
+
   /axios/0.21.4:
     resolution: {integrity: sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==}
     dependencies:
@@ -1305,6 +1331,16 @@ packages:
     transitivePeerDependencies:
       - debug
     dev: true
+
+  /axios/1.2.2:
+    resolution: {integrity: sha512-bz/J4gS2S3I7mpN/YZfGFTqhXTYzRho8Ay38w2otuuDR322KzFIWm/4W2K6gIwvWaws5n+mnb7D1lN9uD+QH6Q==}
+    dependencies:
+      follow-redirects: 1.15.2
+      form-data: 4.0.0
+      proxy-from-env: 1.1.0
+    transitivePeerDependencies:
+      - debug
+    dev: false
 
   /balanced-match/1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -1640,7 +1676,6 @@ packages:
     engines: {node: '>= 0.8'}
     dependencies:
       delayed-stream: 1.0.0
-    dev: true
 
   /commander/2.20.3:
     resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
@@ -1866,7 +1901,6 @@ packages:
   /delayed-stream/1.0.0:
     resolution: {integrity: sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==}
     engines: {node: '>=0.4.0'}
-    dev: true
 
   /depd/2.0.0:
     resolution: {integrity: sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==}
@@ -2260,7 +2294,6 @@ packages:
     peerDependenciesMeta:
       debug:
         optional: true
-    dev: true
 
   /for-each/0.3.3:
     resolution: {integrity: sha512-jqYfLp7mo9vIyQf8ykW2v7A+2N4QjeCeI5+Dz9XraiO1ign81wjiH7Fb9vSOWvQfNtmSa4H2RoQTrrXivdUZmw==}
@@ -2275,7 +2308,6 @@ packages:
       asynckit: 0.4.0
       combined-stream: 1.0.8
       mime-types: 2.1.35
-    dev: true
 
   /formidable/2.1.1:
     resolution: {integrity: sha512-0EcS9wCFEzLvfiks7omJ+SiYJAiD+TzK4Pcw1UlUoGnhUxDcMKjt0P7x8wEb0u6OHu8Nb98WG3nxtlF5C7bvUQ==}
@@ -2668,6 +2700,11 @@ packages:
   /is-promise/2.2.2:
     resolution: {integrity: sha512-+lP4/6lKUBfQjZ2pdxThZvLUAafmZb8OAxFb8XXtiQmS35INgr85hdOGoEs124ez1FCnZJt6jau/T+alh58QFQ==}
     dev: true
+
+  /is-retry-allowed/2.2.0:
+    resolution: {integrity: sha512-XVm7LOeLpTW4jV19QSH38vkswxoLud8sQ57YwJVTPWdiaI9I8keEhGFpBlslyVsgdQy4Opg8QOLb8YRgsyZiQg==}
+    engines: {node: '>=10'}
+    dev: false
 
   /is-stream/1.1.0:
     resolution: {integrity: sha512-uQPm8kcs47jx38atAcWTVxyltQYoPT68y9aWYdV6yWXSyW8mzSat0TL6CiWdZeCdF3KrAvpVtnHbTv4RN+rqdQ==}
@@ -3361,6 +3398,10 @@ packages:
       ipaddr.js: 1.9.1
     dev: false
 
+  /proxy-from-env/1.1.0:
+    resolution: {integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==}
+    dev: false
+
   /pstree.remy/1.1.8:
     resolution: {integrity: sha512-77DZwxQmxKnu3aR542U+X8FypNzbfJ+C5XQDk3uWjWxn6151aIMGthWYRXTqT1E5oJvg+ljaa2OJi+VfvCOQ8w==}
     dev: true
@@ -3472,6 +3513,10 @@ packages:
       '@redis/json': 1.0.4_@redis+client@1.4.2
       '@redis/search': 1.1.0_@redis+client@1.4.2
       '@redis/time-series': 1.0.4_@redis+client@1.4.2
+    dev: false
+
+  /regenerator-runtime/0.13.11:
+    resolution: {integrity: sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==}
     dev: false
 
   /require-from-string/2.0.2:
