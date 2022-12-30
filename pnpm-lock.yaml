@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@am92/api-crypto': ^1.0.2
   '@am92/api-logger': ^1.0.3
-  '@am92/express-utils': ^1.0.5
+  '@am92/express-utils': ^1.0.7
   '@am92/node-http': ^1.0.3
   '@vendia/serverless-express': ^4.10.1
   body-parser: ^1.20.1
@@ -20,7 +20,7 @@ specifiers:
 dependencies:
   '@am92/api-crypto': 1.0.2
   '@am92/api-logger': 1.0.3
-  '@am92/express-utils': 1.0.5
+  '@am92/express-utils': 1.0.7
   '@am92/node-http': 1.0.3
   '@vendia/serverless-express': 4.10.1
   body-parser: 1.20.1
@@ -65,8 +65,8 @@ packages:
       winston: 3.8.2
     dev: false
 
-  /@am92/express-utils/1.0.5:
-    resolution: {integrity: sha512-LeU84AMcdwCxI6W0O86t/exVjbi+eeTYUnJtqaZhPeGJmCZy+N7pp5DNgMKIJrE2gd42yV+U4F9uKnD2cVM7QA==}
+  /@am92/express-utils/1.0.7:
+    resolution: {integrity: sha512-mbw0Qzxq9aTHGrsdrSQfypAcwtY9+63AYQl/nzCtz0YNCzZQWT56ygRU33OfxMUWoLbKfVAjttDYgABgpmjwEA==}
     requiresBuild: true
     dependencies:
       '@am92/api-crypto': 1.0.2

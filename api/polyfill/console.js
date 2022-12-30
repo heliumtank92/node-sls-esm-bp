@@ -7,5 +7,3 @@ console.info = logger.info
 console.debug = logger.debug
 console.trace = logger.trace
 console.log = logger.log
-
-export default logger
