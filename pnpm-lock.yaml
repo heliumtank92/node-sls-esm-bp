@@ -1,10 +1,10 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@am92/api-crypto': ^1.0.2
-  '@am92/api-logger': ^1.0.3
-  '@am92/express-utils': ^1.0.7
-  '@am92/node-http': ^1.0.3
+  '@am92/api-crypto': ^1.0.6
+  '@am92/api-logger': ^1.0.4
+  '@am92/express-utils': ^1.0.9
+  '@am92/node-http': ^1.0.4
   '@vendia/serverless-express': ^4.10.1
   body-parser: ^1.20.1
   cors: ^2.8.5
@@ -18,10 +18,10 @@ specifiers:
   serverless-dotenv-plugin: ^4.0.2
 
 dependencies:
-  '@am92/api-crypto': 1.0.2
-  '@am92/api-logger': 1.0.3
-  '@am92/express-utils': 1.0.7
-  '@am92/node-http': 1.0.3
+  '@am92/api-crypto': 1.0.6
+  '@am92/api-logger': 1.0.4
+  '@am92/express-utils': 1.0.9
+  '@am92/node-http': 1.0.4
   '@vendia/serverless-express': 4.10.1
   body-parser: 1.20.1
   cors: 2.8.5
@@ -45,32 +45,32 @@ packages:
       es5-ext: 0.10.62
     dev: true
 
-  /@am92/api-crypto/1.0.2:
-    resolution: {integrity: sha512-FrprIHRK52qjo/l6zeJ3mjql9xDJRAJW6g0/e9973mhYRUp8GRodAHbttgQj3VTqIyDl9iD3F8HZRB8cGZEz/g==}
+  /@am92/api-crypto/1.0.6:
+    resolution: {integrity: sha512-+IpPpvHFNXVMgUtg+Rz3xbkvfRaK33zUfNekCKhVOJQnEhetdqlkANJXeP/2TP0g5q7vhbiacF9rATVFuVav2g==}
     requiresBuild: true
     dependencies:
-      '@am92/jose-crypto': 1.0.3
-      '@am92/kms': 1.0.3
-      '@am92/redis': 1.0.1
+      '@am92/jose-crypto': 1.0.5
+      '@am92/kms': 1.0.5
+      '@am92/redis': 1.0.6
       moment: 2.29.4
     transitivePeerDependencies:
       - aws-crt
     dev: false
 
-  /@am92/api-logger/1.0.3:
-    resolution: {integrity: sha512-QpOe6LCrpgsgAsJXkRvwzY/qwe4KJ6kqHc/eDaeCAnM7fWf+qoa6jGBUBvEIv51w2ac+mgaPVW9gTIgewVRSPw==}
+  /@am92/api-logger/1.0.4:
+    resolution: {integrity: sha512-/R02tTW/dplKhK+saRbeCKrKSHcCu2phDF0XhgPcSDV/ERmt0BKwJBSG5yz6fFjUKZ6a8QQM99MBU50Yp9UmkA==}
     requiresBuild: true
     dependencies:
       chalk: 5.2.0
       winston: 3.8.2
     dev: false
 
-  /@am92/express-utils/1.0.7:
-    resolution: {integrity: sha512-mbw0Qzxq9aTHGrsdrSQfypAcwtY9+63AYQl/nzCtz0YNCzZQWT56ygRU33OfxMUWoLbKfVAjttDYgABgpmjwEA==}
+  /@am92/express-utils/1.0.9:
+    resolution: {integrity: sha512-m7bL6wB2vN7HWXqZmJcQJ/mATQH9CNp8pprJ9wkcTmJ9bXFJ+RXsWO/e/gGwFPUskbOKWbAI3GYdXvlXjEofeA==}
     requiresBuild: true
     dependencies:
-      '@am92/api-crypto': 1.0.2
-      '@am92/api-logger': 1.0.3
+      '@am92/api-crypto': 1.0.6
+      '@am92/api-logger': 1.0.4
       express-http-context: 1.2.4
       lodash: 4.17.21
       nanoid: 4.0.0
@@ -78,34 +78,31 @@ packages:
       - aws-crt
     dev: false
 
-  /@am92/jose-crypto/1.0.3:
-    resolution: {integrity: sha512-RoarPXQbB6a6sCsclc22RlIsojkkCYrT9QteYd1Zcut/8KCv7aXyvOJ9zQvPTBYmcPdtl1VguAEJgVBIo0svVw==}
-    requiresBuild: true
+  /@am92/jose-crypto/1.0.5:
+    resolution: {integrity: sha512-2UNryjs9Gsz4GLMQrM3EG3QyJrkJ4gLPpU31uorA5lVGOx8qjwtvHW+ldmgFhmuNI9hXuI3rcXtXuAImxDxYrg==}
     dev: false
 
-  /@am92/kms/1.0.3:
-    resolution: {integrity: sha512-Xzx0sNnC4aHiL3aO/0PGShCwJt9T4Pgb1IAeRCuATT9+fc/+H0f+bUlPjI359U3BPVkqVBii0nc1sXvxCEbBvA==}
-    requiresBuild: true
+  /@am92/kms/1.0.5:
+    resolution: {integrity: sha512-ygvqKnEevhhmSDkkKPKIYNpRx9Ieo0H6jd0W6+o4KIC2wwnZK6VooiS9WTfRfGZsxV64AqN3LwnOOVabd/9gqA==}
     dependencies:
       '@aws-sdk/client-kms': 3.241.0
     transitivePeerDependencies:
       - aws-crt
     dev: false
 
-  /@am92/node-http/1.0.3:
-    resolution: {integrity: sha512-l8s6xcI1Qcn5SGQDBqbhuXLKjMOgb3P9/gGGeWBtSQmOQpi5uiJJdRES5DonoYIs+8lbNfF0OPeHWpLCnUNdFg==}
+  /@am92/node-http/1.0.4:
+    resolution: {integrity: sha512-hgdyFhxP1Hi+1QuEcl83Q2p7fSnyunrmi8QZiFiwvVq+pfm65w2sfNtrjntcNUT/AO3Cxxd2bnNZ0XlTPu2fUQ==}
     requiresBuild: true
     dependencies:
-      '@am92/api-logger': 1.0.3
+      '@am92/api-logger': 1.0.4
       axios: 1.2.2
       axios-retry: 3.3.1
     transitivePeerDependencies:
       - debug
     dev: false
 
-  /@am92/redis/1.0.1:
-    resolution: {integrity: sha512-tHI+A3JbLT4yc7BZCpYdZm3Shaa0aildv2pSMj2jmkOlTYU+wHK0ou2xpesuR+i6k4GGN+a3DjybAzQo2LQRGA==}
-    requiresBuild: true
+  /@am92/redis/1.0.6:
+    resolution: {integrity: sha512-IDE5eWqXUAZsE1F7buCJMYHcbf1/2CSjuXi2ZWCsGgwouorIFz5j2nD2jrMDN5em1kzrSqpRs6bsXVLniZSBTw==}
     dependencies:
       redis: 4.5.1
     dev: false
@@ -876,7 +873,7 @@ packages:
     engines: {node: '>= 8'}
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
-      fastq: 1.14.0
+      fastq: 1.15.0
     dev: true
 
   /@redis/bloom/1.1.0_@redis+client@1.4.2:
@@ -999,7 +996,7 @@ packages:
     dependencies:
       archive-type: 4.0.0
       chalk: 4.1.2
-      ci-info: 3.7.0
+      ci-info: 3.7.1
       cli-progress-footer: 2.3.2
       content-disposition: 0.5.4
       d: 1.0.1
@@ -1077,8 +1074,8 @@ packages:
       '@types/node': 18.11.18
     dev: false
 
-  /@types/express-serve-static-core/4.17.31:
-    resolution: {integrity: sha512-DxMhY+NAsTwMMFHBTtJFNp5qiHKJ7TeqOo23zVEM9alT1Ml27Q3xcTH0xwxn7Q0BbMcVEJOs/7aQtUWupUQN3Q==}
+  /@types/express-serve-static-core/4.17.32:
+    resolution: {integrity: sha512-aI5h/VOkxOF2Z1saPy0Zsxs5avets/iaiAJYznQFm5By/pamU31xWKL//epiF4OfUA2qTOc9PV6tCUjhO8wlZA==}
     dependencies:
       '@types/node': 18.11.18
       '@types/qs': 6.9.7
@@ -1089,7 +1086,7 @@ packages:
     resolution: {integrity: sha512-Yv0k4bXGOH+8a+7bELd2PqHQsuiANB+A8a4gnQrkRWzrkKlb6KHaVvyXhqs04sVW/OWlbPyYxRgYlIXLfrufMQ==}
     dependencies:
       '@types/body-parser': 1.19.2
-      '@types/express-serve-static-core': 4.17.31
+      '@types/express-serve-static-core': 4.17.32
       '@types/qs': 6.9.7
       '@types/serve-static': 1.15.0
     dev: false
@@ -1301,8 +1298,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /aws-sdk/2.1285.0:
-    resolution: {integrity: sha512-nuoHXeyaJ3926NRfJCR2czcnToYDFvGFmhRSihgqxo0IgY4djFy7lZ+SdhqVODNal/Fd25SRQnTrYtYoRkgbkg==}
+  /aws-sdk/2.1286.0:
+    resolution: {integrity: sha512-CvkCD1+NSk2MPOutD2hEPhXDET/79w/gd9a359QWb9Ja0Fd4vVFXPkhlm1DTGzuwqFKGinpCMxDP4md7QPsVvw==}
     engines: {node: '>= 10.0.0'}
     dependencies:
       buffer: 4.9.2
@@ -1551,8 +1548,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /ci-info/3.7.0:
-    resolution: {integrity: sha512-2CpRNYmImPx+RXKLq6jko/L07phmS9I02TyqkcNU20GCF/GgaWvc58hPtjxDX8lPpkdwc9sNh72V9k00S7ezog==}
+  /ci-info/3.7.1:
+    resolution: {integrity: sha512-4jYS4MOAaCIStSRwiuxc4B8MYhIe676yO1sYGzARnjXkWpmzZMMYxY6zu8WYWDhSuth5zhrQ1rhNSibyyvv4/w==}
     engines: {node: '>=8'}
     dev: true
 
@@ -2176,8 +2173,8 @@ packages:
     engines: {node: '>= 4.9.1'}
     dev: true
 
-  /fastq/1.14.0:
-    resolution: {integrity: sha512-eR2D+V9/ExcbF9ls441yIuN6TI2ED1Y2ZcA5BmMtJsOkWOFRJQ0Jt0g1UwqXJJVAb+V+umH5Dfr8oh4EVP7VVg==}
+  /fastq/1.15.0:
+    resolution: {integrity: sha512-wBrocU2LCXXa+lWBt8RoIRD89Fi8OdABODa/kEnyeyjS5aZO5/GNvI5sEINADqP/h8M29UHTHUb53sUu5Ihqdw==}
     dependencies:
       reusify: 1.0.4
     dev: true
@@ -3661,7 +3658,7 @@ packages:
     resolution: {integrity: sha512-xJ8bOW/e/MUB9twScTDGRlnS0yxW176+ikuR3SjAH4jW/uiZ/dXPdeGTeTFiPZdybzIE4fBZfeeW8CZAEG1OUg==}
     engines: {node: '>=14'}
     dependencies:
-      aws-sdk: 2.1285.0
+      aws-sdk: 2.1286.0
     dev: true
 
   /serverless-dotenv-plugin/4.0.2_serverless@3.26.0:
@@ -3687,12 +3684,12 @@ packages:
       ajv: 8.11.2
       ajv-formats: 2.1.1
       archiver: 5.3.1
-      aws-sdk: 2.1285.0
+      aws-sdk: 2.1286.0
       bluebird: 3.7.2
       cachedir: 2.3.0
       chalk: 4.1.2
       child-process-ext: 2.1.1
-      ci-info: 3.7.0
+      ci-info: 3.7.1
       cli-progress-footer: 2.3.2
       d: 1.0.1
       dayjs: 1.11.7
