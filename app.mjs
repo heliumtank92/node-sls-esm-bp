@@ -7,7 +7,7 @@ import Express from 'express'
 import cors from 'cors'
 import bodyParser from 'body-parser'
 import helmet from 'helmet'
-import initializeRoutes from '@am92/express-utils/initializeRoutes'
+import configureApp from '@am92/express-utils/configureApp'
 
 import startServer from './startServer.mjs'
 import Routes from './api/routes/index.mjs'
@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({ limit: BODY_LIMIT, extended: true }))
 app.use(helmet())
 
 // Initialize Routes
-initializeRoutes(app, Routes)
+configureApp(app, Routes)
 
 // Start Server
 startServer(app)

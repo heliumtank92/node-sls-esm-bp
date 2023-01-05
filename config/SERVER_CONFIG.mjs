@@ -34,6 +34,14 @@ const SERVER_CONFIG = {
 
 export default SERVER_CONFIG
 
+const {
+  npm_package_name: pkgName = '',
+  npm_package_version: pkgVersion = ''
+} = process.env
+const SERVICE = `${pkgName}@${pkgVersion}`
+
+export { SERVICE }
+
 function _sanitizeRegExpStr (string) {
   const escapedString = string.trim().replace(/[./]/g, '\\$&')
   const whildcardReplaced = escapedString.replace(/\*/g, '[0-9a-zA-Z.\\-_:]*')
