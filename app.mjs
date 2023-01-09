@@ -1,7 +1,7 @@
 // NOTE: Prioritzed Imports
 import 'dotenv/config'
 import './api/polyfill/nodeEnv.js'
-import './api/polyfill/console.js'
+import '@am92/api-logger/polyfillConsole'
 
 import Express from 'express'
 import cors from 'cors'
