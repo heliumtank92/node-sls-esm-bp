@@ -2,9 +2,9 @@ lockfileVersion: 5.4
 
 specifiers:
   '@am92/api-crypto': ^1.0.10
-  '@am92/api-logger': ^1.0.12
+  '@am92/api-logger': ^1.0.14
   '@am92/express-utils': ^1.0.14
-  '@am92/node-http': ^1.0.8
+  '@am92/node-http': ^1.0.9
   '@vendia/serverless-express': ^4.10.1
   body-parser: ^1.20.1
   cors: ^2.8.5
@@ -19,9 +19,9 @@ specifiers:
 
 dependencies:
   '@am92/api-crypto': 1.0.10
-  '@am92/api-logger': 1.0.12
+  '@am92/api-logger': 1.0.14
   '@am92/express-utils': 1.0.14
-  '@am92/node-http': 1.0.8
+  '@am92/node-http': 1.0.9
   '@vendia/serverless-express': 4.10.1
   body-parser: 1.20.1
   cors: 2.8.5
@@ -57,8 +57,8 @@ packages:
       - aws-crt
     dev: false
 
-  /@am92/api-logger/1.0.12:
-    resolution: {integrity: sha512-RjuBT3z/4TbJXDvENLkLPQIHm6m8yFS+rAp9B8RauasmEWgsj04laKvzN5IUWknkmvGbsZPaoXs17GPrhcSXuw==}
+  /@am92/api-logger/1.0.14:
+    resolution: {integrity: sha512-MHCDLVYFd0NklfSZyoq7N6avT5v7PrLS3bPtbp3A5MMWNw3uJa3gADObLh91TrVwfmPeIpB3GMAXM5TkcAWH1g==}
     requiresBuild: true
     dependencies:
       chalk: 5.2.0
@@ -89,8 +89,8 @@ packages:
       - aws-crt
     dev: false
 
-  /@am92/node-http/1.0.8:
-    resolution: {integrity: sha512-clHLKgqqoy58F2VSNd8X6MVnFFm+l1hAe8u0bNgS8UzI0TSpXzF9dIPiJimTpM/IB675L1j9eTLLcaTF/WVR2Q==}
+  /@am92/node-http/1.0.9:
+    resolution: {integrity: sha512-cDlk3F5Z/Q90K8IbxnwuJTlP5Czy+ZKg8W0cu6KkzDmwRPkTHo3i5ekRTMEiA3U2zhEAENxv110QNTMoeFvcmw==}
     requiresBuild: true
     dependencies:
       axios: 1.2.2
@@ -1296,8 +1296,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /aws-sdk/2.1290.0:
-    resolution: {integrity: sha512-qRrXLgK4FpkdxeagjrHuhtEEvYrvRbddTBg1I7KBuMCIhXHzSS3nEUmdZjdyMuQJEvt0BCJjwVkNh8e/5TauDQ==}
+  /aws-sdk/2.1291.0:
+    resolution: {integrity: sha512-iM82Md2Wb29MZ72BpNF4YeIHtkJTyw+JMGXJG48Dwois2Rq7rLcriX6NN/4Fx4b5EEtUkwAO/wJc+NTHI7QeJw==}
     engines: {node: '>= 10.0.0'}
     dependencies:
       buffer: 4.9.2
@@ -3656,7 +3656,7 @@ packages:
     resolution: {integrity: sha512-xJ8bOW/e/MUB9twScTDGRlnS0yxW176+ikuR3SjAH4jW/uiZ/dXPdeGTeTFiPZdybzIE4fBZfeeW8CZAEG1OUg==}
     engines: {node: '>=14'}
     dependencies:
-      aws-sdk: 2.1290.0
+      aws-sdk: 2.1291.0
     dev: true
 
   /serverless-dotenv-plugin/4.0.2_serverless@3.26.0:
@@ -3682,7 +3682,7 @@ packages:
       ajv: 8.12.0
       ajv-formats: 2.1.1
       archiver: 5.3.1
-      aws-sdk: 2.1290.0
+      aws-sdk: 2.1291.0
       bluebird: 3.7.2
       cachedir: 2.3.0
       chalk: 4.1.2
