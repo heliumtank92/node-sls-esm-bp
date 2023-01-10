@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@am92/api-crypto': ^1.0.10
-  '@am92/api-logger': ^1.0.14
+  '@am92/api-logger': ^1.0.15
   '@am92/express-utils': ^1.0.14
   '@am92/node-http': ^1.0.9
   '@vendia/serverless-express': ^4.10.1
@@ -19,7 +19,7 @@ specifiers:
 
 dependencies:
   '@am92/api-crypto': 1.0.10
-  '@am92/api-logger': 1.0.14
+  '@am92/api-logger': 1.0.15
   '@am92/express-utils': 1.0.14
   '@am92/node-http': 1.0.9
   '@vendia/serverless-express': 4.10.1
@@ -57,8 +57,8 @@ packages:
       - aws-crt
     dev: false
 
-  /@am92/api-logger/1.0.14:
-    resolution: {integrity: sha512-MHCDLVYFd0NklfSZyoq7N6avT5v7PrLS3bPtbp3A5MMWNw3uJa3gADObLh91TrVwfmPeIpB3GMAXM5TkcAWH1g==}
+  /@am92/api-logger/1.0.15:
+    resolution: {integrity: sha512-cnOFF9/9ZA2p3cK4ShKp4fb67/+D6QRZQNfQU9PXLuagAs0V7oo8MxB7Z9LeA3iRtmhH3KVdzsEhxNO5ei0uLg==}
     requiresBuild: true
     dependencies:
       chalk: 5.2.0

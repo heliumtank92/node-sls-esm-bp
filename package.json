@@ -25,7 +25,7 @@
   "license": "MIT",
   "dependencies": {
     "@am92/api-crypto": "^1.0.10",
-    "@am92/api-logger": "^1.0.14",
+    "@am92/api-logger": "^1.0.15",
     "@am92/express-utils": "^1.0.14",
     "@am92/node-http": "^1.0.9",
     "@vendia/serverless-express": "^4.10.1",
