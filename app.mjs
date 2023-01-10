@@ -1,6 +1,7 @@
 // NOTE: Prioritzed Imports
 import 'dotenv/config'
 import './api/polyfill/nodeEnv.js'
+import './api/polyfill/apiLogger.js'
 import '@am92/api-logger/polyfillConsole'
 
 import Express from 'express'
