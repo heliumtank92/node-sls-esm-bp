@@ -24,7 +24,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@am92/api-crypto": "^1.0.12",
     "@am92/api-logger": "^1.0.17",
     "@am92/express-utils": "^1.0.18",
     "@am92/node-http": "^1.0.12",
