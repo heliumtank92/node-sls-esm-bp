@@ -1,6 +1,6 @@
 {
   "name": "node-sls-rsrc-esm-bp",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Node Boilerplate using Express JS. This Boilerplate supports Jose Crypto, Logging Solution & HttpClient by default.",
   "type": "module",
   "main": "app.mjs",
@@ -24,9 +24,9 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@am92/api-logger": "^1.0.18",
-    "@am92/express-utils": "^1.0.18",
-    "@am92/node-http": "^1.0.12",
+    "@am92/api-logger": "^1.0.20",
+    "@am92/express-utils": "^1.0.20",
+    "@am92/node-http": "^1.0.14",
     "@vendia/serverless-express": "^4.10.1",
     "body-parser": "^1.20.1",
     "cors": "^2.8.5",
@@ -38,7 +38,7 @@
     "nodemon": "^2.0.20",
     "serverless": "3.26.0",
     "serverless-deployment-bucket": "^1.6.0",
-    "serverless-domain-manager": "^6.3.1",
+    "serverless-domain-manager": "^6.4.2",
     "serverless-dotenv-plugin": "^4.0.2"
   },
   "keywords": [
