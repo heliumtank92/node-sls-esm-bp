@@ -24,9 +24,9 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@am92/api-logger": "^1.0.21",
+    "@am92/api-logger": "^1.0.25",
     "@am92/express-utils": "^1.0.22",
-    "@am92/node-http": "^1.0.17",
+    "@am92/node-http": "^1.0.18",
     "@vendia/serverless-express": "^4.10.1",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
