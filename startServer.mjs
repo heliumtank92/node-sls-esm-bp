@@ -1,11 +1,10 @@
 import ExpressUtils from '@am92/express-utils'
-
 import SERVER_CONFIG, { SERVICE } from './config/SERVER_CONFIG.mjs'
 
 const { PORT } = SERVER_CONFIG
 const successLogFunc = console.success || console.info
 
-const startServer = async (app) => {
+export default async function startServer (app) {
   try {
     // Initialize Express Utils
     await ExpressUtils.initialize()
@@ -19,5 +18,3 @@ const startServer = async (app) => {
     throw error
   }
 }
-
-export default startServer

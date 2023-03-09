@@ -1,6 +1,5 @@
 import NodeHttp from '@am92/node-http'
-import httpContext from '@am92/express-utils/httpContext'
-import { REQUEST_ID_HEADER_KEY, SESSION_ID_HEADER_KEY } from '@am92/express-utils/CONSTANTS'
+import { EXPS_CONST, httpContext } from '@am92/express-utils'
 
 const CustomHeaderInterceptor = {
   request: [customHeaderRequestSuccess, null, { synchronous: true }]
@@ -15,8 +14,8 @@ function customHeaderRequestSuccess (config) {
   const requestId = httpContext.getRequestId()
   const sessionId = httpContext.getSessionId()
 
-  config.headers[REQUEST_ID_HEADER_KEY] = requestId
-  config.headers[SESSION_ID_HEADER_KEY] = sessionId
+  config.headers[EXPS_CONST.REQUEST_ID_HEADER_KEY] = requestId
+  config.headers[EXPS_CONST.SESSION_ID_HEADER_KEY] = sessionId
 
   return config
 }
