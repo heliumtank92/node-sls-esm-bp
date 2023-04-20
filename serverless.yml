@@ -10,10 +10,9 @@ plugins:
   - serverless-deployment-bucket
 
 package:
-  exclude:
-    - src/**
+  excludeDevDependencies: true
 
-frameworkVersion: "3.17.0"
+frameworkVersion: "3.30.1"
 
 provider:
   name: aws
@@ -21,19 +20,23 @@ provider:
   stage: ${self:custom.stage}
   stackName: ${self:service}-${self:provider.stage}
   apiName: ${self:service}-${self:provider.stage}
-  runtime: nodejs14.x
+  runtime: nodejs18.x
   memorySize: 3000
-  
+  vpc: ${self:custom.vpc}
   iam:
     role:
       managedPolicies:
         - ${self:custom.managedPolicies}
-
   tags: ${self:custom.tags}
 
 functions:
   index:
     handler: lambda.handler
     name: ${self:service}-${self:provider.stage}
+    
+    # Function URL Config
+    url: true
+    
+    # API Gateway Config
     events:
       - httpApi: '*'

@@ -1,8 +1,10 @@
+# Default Parameters
 region: ''
 service: ''
 stage: ''
 managedPolicies: ''
 
+# Optional Custom Domain Parameters
 customDomain:
   domainName: ''
   basePath: ''
@@ -13,13 +15,20 @@ customDomain:
   endpointType: regional
   apiType: http
 
+# Optional Custom Deployment Bucket Parameters
 deploymentBucket:
   name: ''
   versioning: false
 
+# Optional VPC Parameters
+vpc:
+  securityGroupIds:
+  subnetIds:
+
+# Tags Parameters
 tags:
-  Product: ''
-  BillingCode: ''
-  Creator: ''
-  Environment: ''
   Name: ''
+  Environment: ''
+  Creator: ''
+  Owner: ''
+  BillingCode: ''
