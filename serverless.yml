@@ -4,10 +4,7 @@ useDotenv: true
 
 service: ${self:custom.service}
 
-plugins:
-  - serverless-dotenv-plugin
-  - serverless-domain-manager
-  - serverless-deployment-bucket
+plugins: ${self:custom.plugins}
 
 package:
   excludeDevDependencies: true
@@ -20,13 +17,14 @@ provider:
   stage: ${self:custom.stage}
   stackName: ${self:service}-${self:provider.stage}
   apiName: ${self:service}-${self:provider.stage}
+  memorySize: ${self:custom.memorySize}
   runtime: nodejs18.x
-  memorySize: 3000
-  vpc: ${self:custom.vpc}
+  
   iam:
-    role:
-      managedPolicies:
-        - ${self:custom.managedPolicies}
+    role: ${self:custom.role}
+
+  vpc: ${self:custom.vpc}
+
   tags: ${self:custom.tags}
 
 functions:
@@ -38,5 +36,5 @@ functions:
     url: true
     
     # API Gateway Config
-    events:
-      - httpApi: '*'
+    # events:
+    #   - httpApi: '*'
