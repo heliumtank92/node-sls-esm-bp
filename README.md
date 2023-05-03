@@ -69,13 +69,13 @@ sls remove
 
 ## Deployment with serverless using scripts
 * Create a prod.env file just outside the project root
-* Create a prod-parameter.yml file just outside the project root
+* Create a prod-parameters.yml file just outside the project root
 * Create a shell script to automate deployment
   ```sh
   #  prod-deploy.sh
   cd /path/to/project/root
   cp ../prod.env ./.env
-  cp ../prod-parameter.yml ./parameter.yml
+  cp ../prod-parameters.yml ./parameters.yml
   sls deploy
   ```
 * Create a shell script to delete deployment
@@ -83,7 +83,7 @@ sls remove
   # prod-remove.sh
   cd /path/to/project/root
   cp ../prod.env ./.env
-  cp ../prod-parameter.yml ./parameter.yml
+  cp ../prod-parameters.yml ./parameters.yml
   sls remove
   ```
 * Run *prod-deploy.sh* or *prod-remove.sh* file as required
