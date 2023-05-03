@@ -1,6 +1,10 @@
 import fs from 'fs'
 import { fileURLToPath } from 'url'
 import path, { dirname } from 'path'
+import { env } from 'custom-env'
+
+// Load Environment Variables from ".env.{NODE_ENV}" file or from ".env" file
+env()
 
 // Set Package Name and Version in case these are filtered out for any reason
 if (!process.env.npm_package_name) {
