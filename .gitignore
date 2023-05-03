@@ -64,3 +64,4 @@ typings/
 
 # Serverless directories
 .serverless/
+parameters.yml
