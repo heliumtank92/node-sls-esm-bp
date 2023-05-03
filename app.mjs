@@ -1,4 +1,5 @@
 // NOTE: Prioritzed Imports
+import './loadEnv.mjs'
 import './polyfill/nodeEnv.js'
 import './polyfill/apiLogger.js'
 import '@am92/api-logger/polyfillConsole'
