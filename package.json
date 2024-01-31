@@ -1,6 +1,6 @@
 {
   "name": "node-sls-rsrc-esm-bp",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Node Boilerplate using Express JS. This Boilerplate supports Jose Crypto, Logging Solution & HttpClient by default.",
   "type": "module",
   "main": "app.mjs",
