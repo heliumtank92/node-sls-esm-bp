@@ -5,10 +5,7 @@ const {
   ALLOW_CORS_METHODS = ''
 } = process.env
 
-const REQUIRED_CONFIG = [
-  'ALLOW_CORS_ORIGIN',
-  'ALLOW_CORS_METHODS'
-]
+const REQUIRED_CONFIG = ['ALLOW_CORS_ORIGIN', 'ALLOW_CORS_METHODS']
 
 REQUIRED_CONFIG.forEach(key => {
   if (!process.env[key]) {
@@ -18,7 +15,9 @@ REQUIRED_CONFIG.forEach(key => {
 })
 
 const ALLOW_ORIGINS = ALLOW_CORS_ORIGIN.split(',')
-const ALLOW_ORIGINS_REGEXP = ALLOW_ORIGINS.map(origin => new RegExp(_sanitizeRegExpStr(origin)))
+const ALLOW_ORIGINS_REGEXP = ALLOW_ORIGINS.map(
+  origin => new RegExp(_sanitizeRegExpStr(origin))
+)
 
 const CORS_OPTIONS = {
   methods: ALLOW_CORS_METHODS,
@@ -34,15 +33,13 @@ const SERVER_CONFIG = {
 
 export default SERVER_CONFIG
 
-const {
-  npm_package_name: pkgName = '',
-  npm_package_version: pkgVersion = ''
-} = process.env
+const { npm_package_name: pkgName = '', npm_package_version: pkgVersion = '' } =
+  process.env
 const SERVICE = `${pkgName}@${pkgVersion}`
 
 export { SERVICE }
 
-function _sanitizeRegExpStr (string) {
+function _sanitizeRegExpStr(string) {
   const escapedString = string.trim().replace(/[./]/g, '\\$&')
   const whildcardReplaced = escapedString.replace(/\*/g, '[0-9a-zA-Z.\\-_:]*')
   return `^${whildcardReplaced}$`.trim()

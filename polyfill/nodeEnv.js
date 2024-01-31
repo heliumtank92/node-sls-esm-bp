@@ -1,6 +1,6 @@
 import fs from 'fs'
-import { fileURLToPath } from 'url'
 import path, { dirname } from 'path'
+import { fileURLToPath } from 'url'
 
 // Set Package Name and Version in case these are filtered out for any reason
 if (!process.env.npm_package_name) {

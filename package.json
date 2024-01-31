@@ -7,7 +7,10 @@
   "scripts": {
     "start": "node app.mjs",
     "start:dev": "NODE_ENV=development nodemon node app.mjs",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\"",
+    "lint": "eslint . || (echo 'Run \"npm run lint:fix\" to automatically fix issues.' && exit 1)",
+    "lint:fix": "eslint --fix .",
+    "prepare": "husky"
   },
   "repository": "git@github.com:heliumtank92/node-sls-esm-bp.git",
   "homepage": "https://github.com/heliumtank92/node-sls-esm-bp#readme",
@@ -36,7 +39,17 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "nodemon": "^3.0.3"
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsonc": "^2.13.0",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "husky": "^9.0.7",
+    "nodemon": "^3.0.3",
+    "prettier": "^3.2.4"
   },
   "keywords": [
     "node",
@@ -45,5 +58,8 @@
     "nodeHttp",
     "express",
     "serverless"
-  ]
+  ],
+  "engines": {
+    "node": ">=18.16.0"
+  }
 }

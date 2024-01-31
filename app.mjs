@@ -4,14 +4,15 @@ import './polyfill/nodeEnv.js'
 import './polyfill/apiLogger.js'
 import '@am92/api-logger/polyfillConsole'
 
-import express from 'express'
-import cors from 'cors'
-import helmet from 'helmet'
 import { configureApp } from '@am92/express-utils'
+import cors from 'cors'
+import express from 'express'
+import helmet from 'helmet'
 
-import startServer from './startServer.mjs'
 import Routes from './api/routes/index.mjs'
+
 import SERVER_CONFIG from './config/SERVER_CONFIG.mjs'
+import startServer from './startServer.mjs'
 
 const { BODY_LIMIT, CORS_OPTIONS } = SERVER_CONFIG
 const app = express()
