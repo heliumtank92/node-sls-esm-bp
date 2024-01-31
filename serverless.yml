@@ -9,7 +9,7 @@ plugins: ${self:custom.plugins}
 package:
   excludeDevDependencies: true
 
-frameworkVersion: "3.30.1"
+frameworkVersion: ${self:custom.frameworkVersion}
 
 provider:
   name: aws
@@ -18,12 +18,12 @@ provider:
   stackName: ${self:service}-${self:provider.stage}
   apiName: ${self:service}-${self:provider.stage}
   memorySize: ${self:custom.memorySize}
-  runtime: nodejs18.x
-  
-  iam:
-    role: ${self:custom.role}
+  runtime: ${self:custom.runtime}
 
-  vpc: ${self:custom.vpc}
+  iam:
+    role: ${self:custom.role, null}
+
+  vpc: ${self:custom.vpc, null}
 
   tags: ${self:custom.tags}
 
@@ -31,10 +31,5 @@ functions:
   index:
     handler: lambda.handler
     name: ${self:service}-${self:provider.stage}
-    
-    # Function URL Config
-    url: true
-    
-    # API Gateway Config
-    # events:
-    #   - httpApi: '*'
+    url: ${self:custom.indexFunction.url, null}
+    events: ${self:custom.indexFunction.events, null}

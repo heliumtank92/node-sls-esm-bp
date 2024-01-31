@@ -1,10 +1,12 @@
 # Default Parameters
+frameworkVersion: '3.38.0'
 region: ''
 service: ''
 stage: ''
 memorySize: 512
+runtime: nodejs18.x
 role:
-  managedPolicies: ''
+  managedPolicies:
 
 # Optional VPC Parameters
 vpc:
@@ -18,6 +20,15 @@ tags:
   Creator: ''
   Owner: ''
   BillingCode: ''
+
+# Index Function Definition
+indexFunction:
+  # Function URL Config
+  url: false
+
+  # API Gateway Config
+  events:
+    - httpApi: '*'
 
 # Optional Custom Domain Parameters API Gateway
 customDomain:

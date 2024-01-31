@@ -6,7 +6,7 @@
   "main": "app.mjs",
   "scripts": {
     "start": "node app.mjs",
-    "start:dev": "NODE_ENV=development node app.mjs",
+    "start:dev": "NODE_ENV=development nodemon node app.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": "git@github.com:heliumtank92/node-sls-esm-bp.git",
@@ -34,6 +34,9 @@
     "express": "^4.18.2",
     "helmet": "^6.1.5",
     "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
   },
   "keywords": [
     "node",
