@@ -31,7 +31,7 @@
     "@am92/api-logger": "^1.1.5",
     "@am92/express-utils": "^1.1.4",
     "@am92/node-http": "^1.1.1",
-    "@vendia/serverless-express": "^4.10.1",
+    "@vendia/serverless-express": "^4.10.3",
     "cors": "^2.8.5",
     "custom-env": "^2.0.2",
     "express": "^4.18.2",
