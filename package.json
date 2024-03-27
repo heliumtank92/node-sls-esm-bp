@@ -34,7 +34,7 @@
     "@vendia/serverless-express": "^4.10.1",
     "cors": "^2.8.5",
     "custom-env": "^2.0.2",
-    "express": "^4.18.2",
+    "express": "^4.19.2",
     "helmet": "^6.1.5",
     "lodash": "^4.17.21"
   },
